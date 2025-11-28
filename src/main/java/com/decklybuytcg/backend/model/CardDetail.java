@@ -2,7 +2,7 @@ package com.decklybuytcg.backend.model;
 
 import java.util.List;
 
-public class Card {
+public class CardDetail {
 
     private String id;
     private String name;
@@ -14,10 +14,9 @@ public class Card {
     private List<String> types;
     private String description;
 
-    // Constructor vacío
-    public Card() {}
+    public CardDetail() {}
 
-    // Getters y Setters
+    // Getters y setters:
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
 
