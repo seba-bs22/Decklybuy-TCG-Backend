@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/cards")
 @Tag(name = "Cartas", description = "Operaciones para buscar cartas")
-@CrossOrigin(origins = "http://localhost:5173") // <--- habilita CORS para tu frontend
+@CrossOrigin(origins = "http://localhost:5173") // Habilitar CORS (Puerto del Frontend)
 public class CardController {
 
     private final CardService cardService;

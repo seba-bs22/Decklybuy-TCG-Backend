@@ -5,10 +5,8 @@ import com.decklybuytcg.backend.dto.CardDetailDTO;
 import com.decklybuytcg.backend.model.CardBrief;
 import com.decklybuytcg.backend.model.CardDetail;
 import com.decklybuytcg.backend.util.CardMapper;
-
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -31,7 +29,7 @@ public class CardService {
                 CardBrief[].class
         );
 
-        // Convertimos la lista original → DTOs con imagen /low.jpg
+        // Cambiar la lista original DTOs con imagen /low.jpg
         return Arrays.stream(cards)
                 .map(CardMapper::toBriefDTO)
                 .collect(Collectors.toList());
@@ -47,7 +45,6 @@ public class CardService {
                 CardDetail.class
         );
 
-        // Convertimos a DTO
         return CardMapper.toDetailDTO(card);
     }
 }

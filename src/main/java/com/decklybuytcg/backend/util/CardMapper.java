@@ -8,7 +8,7 @@ import com.decklybuytcg.backend.dto.CardDetailDTO;
 public class CardMapper {
 
     /**
-     * Convierte CardDetail (modelo de la API) → CardDetailDTO (respuesta para el frontend)
+     * Convierte CardDetail (modelo de la API) a CardDetailDTO (respuesta para el frontend)
      */
     public static CardDetailDTO toDetailDTO(CardDetail card) {
         if (card == null) return null;
@@ -32,7 +32,7 @@ public class CardMapper {
     }
 
     /**
-     * Convierte CardBrief (modelo de la API) → CardBriefDTO (respuesta simplificada)
+     * Convierte CardBrief (modelo de la API) a CardBriefDTO (respuesta simplificada)
      */
     public static CardBriefDTO toBriefDTO(CardBrief card) {
         if (card == null) return null;
