@@ -35,4 +35,14 @@ public class CardController {
     public List<CardBriefDTO> searchCardsByName(@RequestParam String name) {
         return cardService.searchByName(name);
     }
+
+    // ================================
+    // OBTENER TODAS LAS CARTAS
+    // ================================
+    @GetMapping("/pokemon")
+    public List<CardBriefDTO> getPokemonCards(
+            @RequestParam(defaultValue = "1") int page
+    ) {
+        return cardService.getPokemonCards(page);
+    }
 }
